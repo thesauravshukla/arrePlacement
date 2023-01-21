@@ -1,0 +1,26 @@
+Table: messages
+- messages_id (integer, primary key)
+- group_id (integer, foreign key, uses whatsappgroups(group_id))
+- user_id (integer, foreign key, uses users(user_id))
+- messageBody (string)
+- creationTime (datetime)
+
+Table: users
+- user_id (integer, primary key)
+- creationTime (datetime)
+- user_name (string)
+- contactNumber (string)
+
+Table: whatsappgroups
+- group_id (integer, primary key)
+- creationTime (datetime)
+- groupName (string)
+
+Table: group_members
+- groupMember_id (integer, primary key)
+- creationTime (datetime)
+- group_id (integer, foreign key, uses whatsappgroups(group_id))
+- user_id (integer, foreign key, uses users(user_id))
+
+
+
